@@ -30,4 +30,17 @@ class Animal {
     ax += speed.x;
     ay += speed.y;
   }
+  
+  boolean isWithin() {
+    if (ax < tankX || ax > tankX + tankW - aw || ay < tankY || ay > height - ah) {
+      return false;
+    }
+    return true;
+  }
+  
+  void keyPressed() {
+    if (key == 'f' || key == 't') {
+      
+    }
+  }
 }

@@ -39,25 +39,25 @@ class Tank {
    }
    */
 
+  
+
   void addAnimal(int x, int y) {
     f.add(new Fish(x, y, 50, 25));
-    for (int i=0; i<f.size(); i++) {
-      f.get(i).display();
-    }
     t.add(new Turtle(x, y, 50, 25));
-    for (int i=0; i<t.size(); i++) {
-      t.get(i).display();
-    }
   }
 
   void moveAnimals() {
     for (int i=0; i<f.size(); i++) {
-      f.get(i).display();
-      f.get(i).move();
+      if (f.get(i).isWithin()) {
+        f.get(i).display();
+        f.get(i).move();
+      }
     }
-    for (int i=0; i<t.size(); i++) {
-      t.get(i).display();
-      t.get(i).move();
+    for (int j=0; j<t.size(); j++) {
+      if (t.get(j).isWithin()) {
+        t.get(j).display();
+        t.get(j).move();
+      }
     }
   }
 }

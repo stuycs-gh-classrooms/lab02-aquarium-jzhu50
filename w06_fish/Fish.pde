@@ -21,7 +21,14 @@ class Fish extends Animal {
 
   void move() {
     hit();
-    ax += speed.x * 3;
-    ay += speed.y * 2;
+    ax += speed.x * 2;
+    ay += speed.y;
+  }
+
+  boolean isWithin() {
+    if (ax < tankX || ax + aw > width || ay < tankY || ay + aw > height - floorH) {
+      return false;
+    }
+    return true;
   }
 }
