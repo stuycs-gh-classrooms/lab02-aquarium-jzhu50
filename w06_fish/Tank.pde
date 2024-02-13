@@ -19,11 +19,7 @@ class Tank {
     rect(tx, ty, tw, th);
     fill(#c2b280);
     rect(tx, height-flh, tw, flh);
-    for (int i=0; i<a.size(); i++) {
-      if (a.get(i).isWithin()) {
-        a.get(i).display();
-      }
-    }
+    displayAll();
   }
 
   void addAnimal(int x, int y) {
@@ -43,7 +39,24 @@ class Tank {
 
   void moveAnimals() {
     for (int i=0; i<a.size(); i++) {
-      a.get(i).move();
+      if (a.get(i).health == 0) {
+        a.remove(i);
+      } else {
+        a.get(i).move();
+      }
+    }
+  }
+
+  void displayAll() {
+    for (int i = 0; i < a.size(); i++) {
+      if (a.get(i).isWithin()) {
+        if (i + 1 < a.size()) { // Check if there's a next element
+          a.get(i).collide(a.get(i+1));
+        }
+        if (a.get(i).health > 0) {
+          a.get(i).display();
+        }
+      }
     }
   }
 }

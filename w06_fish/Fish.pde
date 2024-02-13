@@ -2,6 +2,7 @@ class Fish extends Animal {
 
   Fish(int x, int y, int w, int h) {
     super(x, y, w, h);
+    health = 20;
     speed = new PVector(int(random(1, 10)), int(random(1, 10)));
   }
 
@@ -13,9 +14,11 @@ class Fish extends Animal {
   void hit() {
     if (ax < tankX || ax+aw > tankX + tankW) {
       speed.x *= -1;
+      health --;
     }
     if (ay < tankY || ay + aw > height - floorH) {
       speed.y *= -1;
+      health --;
     }
   }
 
@@ -31,4 +34,6 @@ class Fish extends Animal {
     }
     return true;
   }
+  
+  void collide(Animal otherAnimal) {}
 }

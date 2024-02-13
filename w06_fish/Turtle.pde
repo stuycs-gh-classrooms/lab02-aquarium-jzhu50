@@ -2,6 +2,7 @@ class Turtle extends Animal {
 
   Turtle(int x, int y, int w, int h) {
     super(x, y, w, h);
+    health = 30;
     speed = new PVector(int(random(1, 5)), int(random(1, 5)));
   }
 
@@ -13,6 +14,7 @@ class Turtle extends Animal {
   void hit() {
     if (ax < tankX || ax+aw/2 > tankX + tankW) {
       speed.x *= -1;
+      health --;
     }
     if (ay-ah/2 < height - floorH || ay+ah/2 > height) {
       speed.y *= -1;
@@ -31,4 +33,6 @@ class Turtle extends Animal {
     }
     return true;
   }
+
+  void collide(Animal otherAnimal) {}
 }
