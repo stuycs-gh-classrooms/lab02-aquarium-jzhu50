@@ -39,7 +39,7 @@ class Animal {
   }
   
   void keyPressed() {
-    if (key == 'f' || key == 't') {
+    if (key == 'f') {
       
     }
   }

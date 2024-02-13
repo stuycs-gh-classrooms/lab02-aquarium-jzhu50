@@ -26,7 +26,7 @@ class Fish extends Animal {
   }
 
   boolean isWithin() {
-    if (ax < tankX || ax + aw > width || ay < tankY || ay + aw > height - floorH) {
+    if (ay < tankY || ay + aw > height - floorH) {
       return false;
     }
     return true;
