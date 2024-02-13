@@ -5,6 +5,8 @@ int tankW;
 int tankH;
 int fish = 1;
 int turtle = 2;
+int crab = 3;
+int shellfish = 4;
 
 Tank t;
 
@@ -33,5 +35,11 @@ void keyPressed() {
   }
   if (key == 't') {
     t.type = 2;
+  }
+  if (key == 'c') {
+    t.type = 3;
+  }
+  if (key == 's') {
+    t.type = 4;
   }
 }

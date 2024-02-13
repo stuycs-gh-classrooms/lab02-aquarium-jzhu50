@@ -6,7 +6,7 @@ class Turtle extends Animal {
   }
 
   void display() {
-    fill(#5E574A);
+    fill(#22A89e);
     ellipse(ax, ay, aw, ah);
   }
 

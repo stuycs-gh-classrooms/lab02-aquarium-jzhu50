@@ -33,6 +33,12 @@ class Tank {
     if (type == 2) {
       a.add(new Turtle(x, y, 25, 15));
     }
+    if (type == 3) {
+      a.add(new Crab(x, y, 25, 25));
+    }
+    if (type == 4) {
+      a.add(new Shellfish(x, y, 20, 25));
+    }
   }
 
   void moveAnimals() {

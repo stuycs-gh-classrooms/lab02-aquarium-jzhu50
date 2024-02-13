@@ -37,10 +37,4 @@ class Animal {
     }
     return true;
   }
-  
-  void keyPressed() {
-    if (key == 'f') {
-      
-    }
-  }
 }
