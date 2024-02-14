@@ -14,7 +14,7 @@ void setup() {
   size(600, 600);
   tankW = width;
   tankH = height - 50;
-  t = new Tank(tankX, tankY, tankW, tankH, floorH);
+  t = new Tank(tankX, tankY, tankW, tankH, floorH); //intializes and empties tank
   t.display();
 }//setup
 
@@ -30,16 +30,16 @@ void mouseClicked() {
 }
 
 void keyPressed() {
-  if (key == 'f') {
+  if (key == '1') {
     t.type = 1;
   }
-  if (key == 't') {
+  if (key == '2') {
     t.type = 2;
   }
-  if (key == 'c') {
+  if (key == '3') {
     t.type = 3;
   }
-  if (key == 's') {
+  if (key == '4') {
     t.type = 4;
   }
-}
+} //matches number keys with different animals

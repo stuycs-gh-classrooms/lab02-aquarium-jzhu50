@@ -16,9 +16,9 @@ class Tank {
   void display() {
     noStroke();
     fill(0, 255, 255);
-    rect(tx, ty, tw, th);
+    rect(tx, ty, tw, th); //tank
     fill(#c2b280);
-    rect(tx, height-flh, tw, flh);
+    rect(tx, height-flh, tw, flh); //water
     displayAll();
   }
 
@@ -58,5 +58,5 @@ class Tank {
         }
       }
     }
-  }
+  } //displays all the animals
 }

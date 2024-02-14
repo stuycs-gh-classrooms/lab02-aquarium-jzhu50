@@ -2,7 +2,7 @@ class Shellfish extends Animal {
 
   Shellfish(int x, int y, int w, int h) {
     super(x, y, w, h);
-    health = 10;
+    health = 20;
     speed = new PVector(int(random(1, 10)), pow(-1, int(random(2)))*int(random(1, 3)));
   }
 

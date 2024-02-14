@@ -5,7 +5,7 @@ class Crab extends Animal {
 
   Crab(int x, int y, int w, int h) {
     super(x, y, w, h);
-    health = 10;
+    health = 50;
     k = tankH - int(random(-(floorH-50)/2+h/2, (floorH-50)/2-h/2));
     a = int(pow(-1, int(random(2)))); //determines the direction: pos & neg
   }
