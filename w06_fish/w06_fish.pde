@@ -25,9 +25,6 @@ void draw() {
   t.moveAnimals();
 }
 
-void mouseClicked() {
-  t.addAnimal(mouseX, mouseY);
-}
 
 void keyPressed() {
   if (key == '1') {
@@ -42,4 +39,5 @@ void keyPressed() {
   if (key == '4') {
     t.type = 4;
   }
+  t.addAnimal(mouseX,mouseY);
 } //matches number keys with different animals
